@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<!-- saved from url=(0029)http://amovie.designzway.com/ -->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!-- Basic Page Needs -->
+        <meta charset="utf-8">
+        <title>AMovie</title>
+        
+    
+   
+    
+    <!-- Fonts -->
+        <!-- Font awesome - icon font -->
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <!-- Roboto -->
+        
+        <!-- <link href="./frontpage_files/css" rel="stylesheet" type="text/css"> -->
+        <link href="{% static 'css' %}" rel="stylesheet" type="text/css">
+        <!-- Open Sans -->
+        <link href="{% static 'css(1)' %}" rel="stylesheet" type="text/css">
+    
+    <!-- Stylesheets -->
+
+        <!-- Mobile menu -->
+        <link href="http://amovie.designzway.com/css/gozha-nav.css" rel="stylesheet">
+        <!-- Select -->
+        <link href="http://amovie.designzway.com/css/external/jquery.selectbox.css" rel="stylesheet">
+
+        <!-- REVOLUTION BANNER CSS SETTINGS -->
+        <link rel="stylesheet" type="text/css" href="{% static 'settings.css' %}" media="screen">
+    
+        <!-- Custom -->
+        <link href="http://amovie.designzway.com/css/style.css?v=1" rel="stylesheet">
+
+
+        <!-- Modernizr --> 
+        <script id="twitter-wjs" src="{% static 'widgets.js' %}"></script>
+        <script src="{% static 'modernizr.custom.js' %}"></script>
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --> 
+    
+</head>
+
+<body data-twttr-rendered="true" style="">
+    <div class="wrapper">
+        
+        <!-- Header section -->
+        <header class="header-wrapper header-wrapper--home" style = "position:fixed">
+            <div class="container">
+                <!-- Logo link-->
+                <a href={% url 'home' %} class="logo">
+                    <img alt="logo" src="{% static 'logo.png' %}">
+                </a>
+                
+                <!-- Main website navigation-->
+                <nav id="navigation-box">
+                    <!-- Toggle for mobile menu mode -->
+                    <a   id="navigation-toggle">
+                        <span class="menu-icon">
+                            <span class="icon-toggle" role="button" aria-label="Toggle Navigation">
+                              <span class="lines"></span>
+                            </span>
+                        </span>
+                    </a>
+                    
+                    <!-- Link navigation -->
+                    <ul id="navigation">
+                        <li>
+                            <span  class="sub-nav-toggle plus"></span>
+                            <a href="/movietickets/" >Home</a>
+                            
+                        </li>
+                        <li>
+                            <span class="sub-nav-toggle plus"></span>
+                            <a >Pages</a>
+                            <ul>
+                                <li class="menu__nav-item"><a href="/movietickets/movies/">All Movie</a></li>
+                                <li class="menu__nav-item"><a href="/movietickets/movies/">Book Ticket</a></li>
+                                <li class="menu__nav-item"><a href="/movietickets/ticket/">Ticket</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="sub-nav-toggle plus"></span>
+                            <a href="/movietickets/movies/">Movies</a>
+                            
+                        </li>
+                        <li>
+                            <span class="sub-nav-toggle plus"></span>
+                            <a >Booking steps</a>
+                            <ul>
+                                <li class="menu__nav-item"><a href="/movietickets/ticket/">Final ticket view</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <span class="sub-nav-toggle plus"></span>
+                            <a >News</a>
+                            <ul>
+                                <li class="menu__nav-item"><a >News (rigth sidebar)</a></li>
+                                <li class="menu__nav-item"><a >News (left sidebar)</a></li>
+                                <li class="menu__nav-item"><a >News (full widht)</a></li>
+                                <li class="menu__nav-item"><a >Single post (rigth sidebar)</a></li>
+                                <li class="menu__nav-item"><a >Single post (left sidebar)</a></li>
+                                <li class="menu__nav-item"><a >Single post (full widht)</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="sub-nav-toggle plus"></span>
+                            <a  >Mega menu</a>
+                               <ul class="mega-menu container">
+                                    <li class="col-md-3 mega-menu__coloum">
+                                        <h4 class="mega-menu__heading">Now in the cinema</h4>
+                                         <ul class="mega-menu__list">
+                                            <li class="mega-menu__nav-item"><a  >The Counselor</a></li>
+                                            <li class="mega-menu__nav-item"><a  >Bad Grandpa</a></li>
+                                            <li class="mega-menu__nav-item"><a  >Blue Is the Warmest Color</a></li>
+                                            <li class="mega-menu__nav-item"><a  >Capital</a></li>
+                                            <li class="mega-menu__nav-item"><a  >Spinning Plates</a></li>
+                                            <li class="mega-menu__nav-item"><a  >Bastards</a></li>
+                                          </ul>
+                                      </li>
+                                        
+                                      <li class="col-md-3 mega-menu__coloum mega-menu__coloum--outheading">
+                                          <ul class="mega-menu__list">
+                                            <li class="mega-menu__nav-item"><a  >Gravity</a></li>
+                                            <li class="mega-menu__nav-item"><a  >Captain Phillips</a></li>
+                                            <li class="mega-menu__nav-item"><a  >Carrie</a></li>
+                                            <li class="mega-menu__nav-item"><a  >Cloudy with a Chance of Meatballs 2</a></li>
+                                          </ul>
+                                      </li>
+                                      
+                                      <li class="col-md-3 mega-menu__coloum">
+                                        <h4 class="mega-menu__heading">Ending soon</h4>
+                                          <ul class="mega-menu__list">
+                                            <li class="mega-menu__nav-item"><a  >Escape Plan</a></li>
+                                            <li class="mega-menu__nav-item"><a  >Rush</a></li>
+                                            <li class="mega-menu__nav-item"><a  >Prisoners</a></li>
+                                            <li class="mega-menu__nav-item"><a  >Enough Said</a></li>
+                                            <li class="mega-menu__nav-item"><a  >The Fifth Estate</a></li>
+                                            <li class="mega-menu__nav-item"><a  >Runner Runner</a></li>
+                                          </ul>
+                                      </li>
+                                    
+                                      <li class="col-md-3 mega-menu__coloum mega-menu__coloum--outheading">
+                                          <ul class="mega-menu__list">
+                                            <li class="mega-menu__nav-item"><a  >Insidious: Chapter 2</a></li>
+                                          </ul>
+                                      </li>
+                               </ul>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <!-- Additional header buttons / Auth and direct link to booking-->
+                <div class="control-panel">
+                    <div class="auth auth--home">
+                      <div class="auth__show">
+                        <span class="auth__image">
+                          <img alt="" src="{% static 'auth.png' %}">
+                        </span>
+                      </div>
+                      <a   class="btn btn--sign btn--singin">
+                          me
+                      </a>
+                        <ul class="auth__function">
+                            <li><a   class="auth__function-item">Watchlist</a></li>
+                            <li><a   class="auth__function-item">Booked tickets</a></li>
+                            <li><a   class="auth__function-item">Discussion</a></li>
+                            <li><a   class="auth__function-item">Settings</a></li>
+                        </ul>
+
+                    </div>
+                    <a  href="/movietickets/movies/" class="btn btn-md btn--warning btn--book btn-control--home ">Book a ticket</a>
+                </div>
+
+            </div>
+        </header>
+
+        <div  style = "padding-top: 55px">
+            {% block content %}
+            {% endblock %}          
+        </div> <!-- /container -->
+
+        
+        
+        
+        <div class="clearfix"></div>
+
+        <footer class="footer-wrapper">
+            <section class="container">
+                <div class="col-xs-4 col-md-2 footer-nav">
+                    <ul class="nav-link">
+                        <li><a   class="nav-link__item">Cities</a></li>
+                        <li><a  class="nav-link__item">Movies</a></li>
+                        <li><a  class="nav-link__item">Trailers</a></li>
+                        <li><a  class="nav-link__item">Rates</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-4 col-md-2 footer-nav">
+                    <ul class="nav-link">
+                        <li><a  class="nav-link__item">Coming soon</a></li>
+                        <li><a  class="nav-link__item">Cinemas</a></li>
+                        <li><a  class="nav-link__item">Best offers</a></li>
+                        <li><a  class="nav-link__item">News</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-4 col-md-2 footer-nav">
+                    <ul class="nav-link">
+                        <li><a  class="nav-link__item">Terms of use</a></li>
+                        <li><a  class="nav-link__item">Gallery</a></li>
+                        <li><a  class="nav-link__item">Contacts</a></li>
+                        <li><a  class="nav-link__item">Shortcodes</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <div class="footer-info">
+                        <p class="heading-special--small">A.Movie<br><span class="title-edition">in the social media</span></p>
+
+                        <div class="social">
+                            <a   class="social__variant fa fa-facebook"></a>
+                            <a   class="social__variant fa fa-twitter"></a>
+                            <a   class="social__variant fa fa-vk"></a>
+                            <a   class="social__variant fa fa-instagram"></a>
+                            <a   class="social__variant fa fa-tumblr"></a>
+                            <a   class="social__variant fa fa-pinterest"></a>
+                        </div>
+                        
+                        <div class="clearfix"></div>
+                        <p class="copy">© A.Movie, 2014. All rights reserved. Done for project submission in course Intro to Database management System at UMKC.</p>
+                    </div>
+                </div>
+            </section>
+        </footer>
+    </div>
+
+    <!-- open/close -->
+        <div class="overlay overlay-hugeinc">
+            
+            <section class="container">
+
+                <div class="col-sm-4 col-sm-offset-4">
+                    <button type="button" class="overlay-close">Close</button>
+                    <form id="login-form" class="login" method="get" novalidate="">
+                        <p class="login__title">sign in <br><span class="login-edition">welcome to A.Movie</span></p>
+
+                        <div class="social social--colored">
+                                <a   class="social__variant fa fa-facebook"></a>
+                                <a   class="social__variant fa fa-twitter"></a>
+                                <a   class="social__variant fa fa-tumblr"></a>
+                        </div>
+
+                        <p class="login__tracker">or</p>
+                        
+                        <div class="field-wrap">
+                        <input type="email" placeholder="Email" name="user-email" class="login__input">
+                        <input type="password" placeholder="Password" name="user-password" class="login__input">
+
+                        <span class="checkbox"></span><input type="checkbox" id="#informed" class="login__check styled">
+                        <label for="#informed" class="login__check-info">remember me</label>
+                         </div>
+                        
+                        <div class="login__control">
+                            <button type="submit" class="btn btn-md btn--warning btn--wider">sign in</button>
+                            <a   class="login__tracker form__tracker">Forgot password?</a>
+                        </div>
+                    </form>
+                </div>
+
+            </section>
+        </div>
+
+	<!-- JavaScript-->
+        <!-- jQuery 1.9.1--> 
+        <script src="{% static 'jquery.min.js' %}"></script>
+        <script>window.jQuery || document.write('<script src="js/external/jquery-1.10.1.min.js"><\/script>')</script>
+        <!-- Migrate --> 
+        <script src="{% static 'jquery-migrate-1.2.1.min.js' %}"></script>
+         <!-- jQuery UI -->
+        <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+        <!-- Bootstrap 3--> 
+        <script src="{% static 'bootstrap.min.js' %}"></script>
+
+        <!-- jQuery REVOLUTION Slider -->
+        <script type="text/javascript" src="{% static 'jquery.themepunch.plugins.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'jquery.themepunch.revolution.min.js' %}"></script>
+
+        <!-- Mobile menu -->
+        <script src="{% static 'jquery.mobile.menu.js' %}"></script>
+         <!-- Select -->
+        <script src="{% static 'jquery.selectbox-0.2.min.js' %}"></script>
+        <!-- Stars rate -->
+        <script src="{% static 'jquery.raty.js' %}"></script>
+
+        <!-- Swiper slider -->
+        <script src="http://amovie.designzway.com/js/external/idangerous.swiper.min.js"></script>
+         <!-- Magnific-popup -->
+        <script src="http://amovie.designzway.com/js/external/jquery.magnific-popup.min.js"></script> 
+
+        <!--*** Google map  ***-->
+        <script src="https://maps.google.com/maps/api/js?sensor=true"></script> 
+        <!--*** Google map infobox  ***-->
+        <script src="http://amovie.designzway.com/js/external/infobox.js"></script> 
+         <!-- Share buttons -->
+        <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+        <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-525fd5e9061e7ef0"></script>
+        
+        <!-- Form element -->
+        <script src="{% static 'form-element.js' %}"></script><style type="text/css">input.styled { display: none; } select.styled { position: relative; width: 190px; opacity: 0; filter: alpha(opacity=0); z-index: 5; } .disabled { opacity: 0.5; filter: alpha(opacity=50); }</style>
+        <!-- Form validation -->
+        <script src="{% static 'form.js' %}"></script>
+
+        <!-- Twitter feed -->
+        <script src="{% static 'twitterfeed.js' %}"></script>
+
+        <!-- Custom -->
+        <script src="{% static 'custom.js' %}"></script><div class="top-scroll" style="display: none;"><a  ></a></div>
+		
+	      <script type="text/javascript">
+              $(document).ready(function() {
+                init_Home();
+              });
+		    </script>
+
+
+
+</body></html>

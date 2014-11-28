@@ -1,0 +1,70 @@
+{% extends "base2.html" %}
+{% load static %}
+{% block content %}
+
+	<!-- Main content -->
+
+    <section class="container">
+        <div class="order-container">
+
+            <h2 class="page-heading">To Retrive Ticket</h2>
+            <form action="/movietickets/ticket/"  id='contact-info' method='get'  class="form contact-info" style ="padding-bottom: 25px; border-bottom: 1px solid #dbdee1; margin-bottom: 25px;">
+
+                <a  class="btn btn-md btn--warning" style="width:200px;">Enter Ticket Number</a>
+                <div class="contact-info__field ">
+
+                    <input id = "id_ticket_number" type='text' name='ticket_number' placeholder="Enter Ticket Number" class="form__mail"  value="{{data.ticket_number}}" style= "color:black;" >
+                </div>
+
+                <div class="order">
+                    <input type="submit" value="Get Details" class="btn btn-md btn--warning btn--wide">
+                </div>
+                
+            </form>
+
+
+            <div class="order">
+                <img class="order__images" alt='' src="http://amovie.designzway.com/images/tickets.png">
+                <p class="order__title">Thank you <br>
+                    <span class="order__descript">
+                        {%if data%}
+                            You have successfully purchased tickets
+                        {%endif%}
+                    </span>
+                </p>
+            </div>
+
+            <div class="ticket">
+                <div class="ticket-position">
+                    <div class="ticket__indecator indecator--pre"><div class="indecator-text pre--text">online ticket</div> </div>
+                    <div class="ticket__inner">
+
+                        <div class="ticket-secondary">
+                            <span class="ticket__item">Ticket number: <strong class="ticket__number">{{data.ticket_number}}</strong></span>
+                            <span class="ticket__item ticket__date">{{data.date}}</span>
+                            <span class="ticket__item ticket__time">{{data.time}}</span>
+                            <span class="ticket__item">Cinema: <span class="ticket__cinema">{{data.theater}}</span></span>
+                            <span class="ticket__item">Hall: <span class="ticket__hall">{{data.screen}}</span></span>
+                            <span class="ticket__item ticket__price">price: <strong class="ticket__cost">{{data.amount_paid}}</strong></span>
+                        </div>
+
+                        <div class="ticket-primery">
+                            <span class="ticket__item ticket__item--primery ticket__film">Film<br><strong class="ticket__movie">{{data.movie}}</strong></span>
+                            <span class="ticket__item ticket__item--primery">Number of Seats <span class="ticket__place">{{data.no_of_seats}}</span></span>
+                        </div>
+
+
+                    </div>
+                    <div class="ticket__indecator indecator--post"><div class="indecator-text post--text">online ticket</div></div>
+                </div>
+            </div>
+
+            <div class="ticket-control">
+                <a href="#" class="watchlist list--download">Download</a>
+                <a href="#" class="watchlist list--print">Print</a>
+            </div>
+
+        </div>
+    </section>
+
+{% endblock %}

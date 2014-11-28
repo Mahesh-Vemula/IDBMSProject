@@ -1,0 +1,11 @@
+applications:
+- name:      src
+  memory:    1G
+  
+# buildpack: https://github.com/joshuamckenty/heroku-buildpack-python  # Does not support Python3
+# command:   python hello.py  # Use this line for Flask, bottle, etc.
+  command: bash ./run.sh
+  buildpack: https://github.com/cloudfoundry/python-buildpack
+  path: .
+  services:
+  - postgresql-2f

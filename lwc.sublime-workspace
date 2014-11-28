@@ -1,0 +1,225 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Join",
+				"JoinAdmin"
+			],
+			[
+				"static",
+				"static_root"
+			],
+			[
+				"J",
+				"JoinAdmin"
+			],
+			[
+				"B",
+				"BASE_DIR"
+			],
+			[
+				"h",
+				"h1	Tag"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"ca",
+				"caption	Tag"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/Makefile/Make.sublime-build",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"Snippet: ",
+				"Snippet: html"
+			]
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Nandu/Desktop/lwc/lwc/lwc/settings.py",
+		"/C/Users/Nandu/Desktop/lwc/lwc/lwc/views.py",
+		"/C/Users/Nandu/Desktop/lwc/lwc/lwc/urls.py",
+		"/C/Users/Nandu/Desktop/lwc/lwc/joins/views.py",
+		"/C/Users/Nandu/Desktop/lwc/lwc/movietickets/models.py",
+		"/C/Users/Nandu/Desktop/lwc/lwc/joins/forms.py",
+		"/C/Users/Nandu/Desktop/lwc/lwc/joins/admin.py",
+		"/C/Users/Nandu/Desktop/lwc/lwc/joins/models.py",
+		"/C/Users/Nandu/Desktop/AMovie2.html",
+		"/C/Users/Nandu/Desktop/lwc/lwc/templates/frontpage.html",
+		"/C/Users/Nandu/Desktop/lwc/lwc/templates/home.html",
+		"/C/Users/Nandu/Desktop/lwc/lwc/static/static_dirs/img/movie-sample1.jpg",
+		"/C/Users/Nandu/Desktop/lwc/lwc/manifest.yml",
+		"/C/Users/Nandu/Desktop/lwc/lwc/templates/moviepage.html",
+		"/C/Users/Nandu/Desktop/lwc/src/templates/testpage.html",
+		"/C/Users/Nandu/Desktop/lwc/src/lwc/urls.py",
+		"/C/Users/Nandu/Desktop/lwc/src/lwc/views.py",
+		"/C/Users/Nandu/Desktop/lwc/src/templates/home.html",
+		"/C/Users/Nandu/Desktop/lwc/src/joins/views.py",
+		"/C/Users/Nandu/Desktop/lwc/src/templates/base.html",
+		"/C/Users/Nandu/Desktop/lwc/src/lwc/settings.py",
+		"/C/Users/Nandu/Desktop/lwc/src/joins/forms.py",
+		"/C/Users/Nandu/Desktop/lwc/src/joins/models.py",
+		"/C/Users/Nandu/Desktop/lwc/src/joins/admin.py",
+		"/C/Users/Nandu/Desktop/lwc/src/manage.py",
+		"/C/Users/Nandu/Desktop/lwc/src/lwc/wsgi.py",
+		"/C/Users/Nandu/Desktop/lwc/src/templates/navbar.html",
+		"/C/Users/Nandu/Desktop/Test_prj/index.html",
+		"/C/Users/Nandu/Downloads/aditya (1)/foundation-master/views/upload_new.html",
+		"/C/Users/Nandu/Downloads/bootstrap-3.1.1-dist/bootstrap-3.1.1-dist/index.html",
+		"/C/Users/Nandu/Downloads/bootstrap-3.1.1-dist/bootstrap-3.1.1-dist/new.html",
+		"/C/Users/Nandu/Downloads/bootstrap-3.1.1-dist/bootstrap-3.1.1-dist/css/bootstrap.min.css",
+		"/C/Users/Nandu/Downloads/bootstrap-3.1.1-dist/bootstrap-3.1.1-dist/css/custom.css",
+		"/C/Users/Nandu/Downloads/foundation-5-sublime-snippets-master/foundation-5-sublime-snippets-master/Snippets/Sublime Snippets/Snippet.button-group.sublime-snippet",
+		"/C/Users/Nandu/Downloads/foundation-5-sublime-snippets-master/foundation-5-sublime-snippets-master/Snippets/Sublime Snippets/Snippet.accordion.sublime-snippet",
+		"/C/Users/Nandu/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Nandu/AppData/Roaming/Sublime Text 2/Packages/HTML/html.sublime-snippet"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"join",
+			"slider",
+			"frontpage_files/",
+			"%}\">",
+			"\"js/",
+			"\"css/",
+			"\"js/",
+			"\"css/",
+			"css/",
+			"css/\n}\n127.0.0.1/media=\"all\"\n* {\n-webkit-box-sizing: border-box;\n-moz-box-sizing: border-box;\nbox-sizing: border-box;\n}\nuser agent stylesheetscript {\ndisplay: none;\n}\nInherited from html.no-js\n127.0.0.1/media=\"all\"\nhtml {\nfont-family: \"Helvetica Neue\",Helvetica,Arial,sans-serif;\nfont-size: 13px;\nline-height: 1.5;\ncolor: #444;\n}\n127.0.0.1/media=\"all\"\nhtml {\nfont-family: sans-serif;\n-ms-text-size-adjust: 100%;\n-webkit-text-size-adjust: 100%;\n}\n\nmargin‒\n‒border‒\n‒padding‒\n‒auto × auto‒\n‒‒\n‒‒\n‒\n\nConsoleSearchEmulationRendering\n\n\n\n\n",
+			"banner",
+			"banner-top",
+			"http://julia.na/assets/http://julia.na/js/",
+			"js/",
+			"assets/"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\"http://amovie.designzway.com/js/",
+			"http://amovie.designzway.com/js/",
+			"http://amovie.designzway.com/css/",
+			"http://julia.na/js/",
+			"http://julia.na/assets/"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}

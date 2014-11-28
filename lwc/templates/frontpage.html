@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<!-- saved from url=(0029)http://amovie.designzway.com/ -->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!-- Basic Page Needs -->
+        <meta charset="utf-8">
+        <title>AMovie</title>
+        <meta name="description" content="A Template by Gozha.net">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="Gozha.net">
+    
+    <!-- Mobile Specific Metas-->
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="telephone=no" name="format-detection">
+    
+    <!-- Fonts -->
+        <!-- Font awesome - icon font -->
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <!-- Roboto -->
+        
+        <!-- <link href="./frontpage_files/css" rel="stylesheet" type="text/css"> -->
+        <link href="{% static 'css' %}" rel="stylesheet" type="text/css">
+        <!-- Open Sans -->
+        <link href="{% static 'css(1)' %}" rel="stylesheet" type="text/css">
+    
+    <!-- Stylesheets -->
+
+        <!-- Mobile menu -->
+        <link href="http://amovie.designzway.com/css/gozha-nav.css" rel="stylesheet">
+        <!-- Select -->
+        <link href="http://amovie.designzway.com/css/external/jquery.selectbox.css" rel="stylesheet">
+
+        <!-- REVOLUTION BANNER CSS SETTINGS -->
+        <link rel="stylesheet" type="text/css" href="{% static 'settings.css' %}" media="screen">
+    
+        <!-- Custom -->
+        <link href="http://amovie.designzway.com/css/style.css?v=1" rel="stylesheet">
+
+
+        <!-- Modernizr --> 
+        <script id="twitter-wjs" src="{% static 'widgets.js' %}"></script>
+        <script src="{% static 'modernizr.custom.js' %}"></script>
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --> 
+    <!--[if lt IE 9]> 
+    	<script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script> 
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>		
+    <![endif]-->
+</head>
+
+<body data-twttr-rendered="true" style="">
+    <div class="wrapper">
+        <!-- Banner 
+        <div class="banner-top">
+            <img alt="top banner" src="{% static 'bra.jpg' %}">
+        </div>
+        -->
+        <!-- Header section -->
+        <header class="header-wrapper header-wrapper--home">
+            <div class="container">
+                <!-- Logo link-->
+                <a href="http://amovie.designzway.com/index.html" class="logo">
+                    <img alt="logo" src="{% static 'logo.png' %}">
+                </a>
+                
+                <!-- Main website navigation-->
+                <nav id="navigation-box">
+                    <!-- Toggle for mobile menu mode -->
+                    <a href="http://amovie.designzway.com/#" id="navigation-toggle">
+                        <span class="menu-icon">
+                            <span class="icon-toggle" role="button" aria-label="Toggle Navigation">
+                              <span class="lines"></span>
+                            </span>
+                        </span>
+                    </a>
+                    
+                    <!-- Link navigation -->
+                    <ul id="navigation">
+                        <li>
+                            <span class="sub-nav-toggle plus"></span>
+                            <a href="http://amovie.designzway.com/#">Pages</a>
+                            <ul>
+                                <li class="menu__nav-item"><a href="http://amovie.designzway.com/movie-page-left.html">Single movie (rigth sidebar)</a></li>
+                                <li class="menu__nav-item"><a href="http://amovie.designzway.com/movie-page-right.html">Single movie (left sidebar)</a></li>
+                                <li class="menu__nav-item"><a href="http://amovie.designzway.com/movie-page-full.html">Single movie (full widht)</a></li>
+                                <li class="menu__nav-item"><a href="http://amovie.designzway.com/movie-list-left.html">Movies list (rigth sidebar)</a></li>
+                                <li class="menu__nav-item"><a href="http://amovie.designzway.com/movie-list-right.html">Movies list (left sidebar)</a></li>
+                                <li class="menu__nav-item"><a href="http://amovie.designzway.com/movie-list-full.html">Movies list (full widht)</a></li>
+                                <li class="menu__nav-item"><a href="http://amovie.designzway.com/single-cinema.html">Single cinema</a></li>
+                                <li class="menu__nav-item"><a href="http://amovie.designzway.com/cinema-list.html">Cinemas list</a></li>
+                                <li class="menu__nav-item"><a href="http://amovie.designzway.com/trailer.html">Trailers</a></li>
+                                <li class="menu__nav-item"><a href="http://amovie.designzway.com/rates-left.html">Rates (rigth sidebar)</a></li>
+                                <li class="menu__nav-item"><a href="http://amovie.designzway.com/rates-right.html">Rates (left sidebar)</a></li>
+                                <li class="menu__nav-item"><a href="http://amovie.designzway.com/rates-full.html">Rates (full widht)</a></li>
+                                <li class="menu__nav-item"><a href="http://amovie.designzway.com/offers.html">Offers</a></li>
+                                <li class="menu__nav-item"><a href="http://amovie.designzway.com/contact.html">Contact us</a></li>
+                                <li class="menu__nav-item"><a href="http://amovie.designzway.com/404.html">404 error</a></li>
+                                <li class="menu__nav-item"><a href="http://amovie.designzway.com/coming-soon.html">Coming soon</a></li>
+                                <li class="menu__nav-item"><a href="http://amovie.designzway.com/login.html">Login/Registration</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="sub-nav-toggle plus"></span>
+                            <a href="http://amovie.designzway.com/page-elements.html">Features</a>
+                            <ul>
+                                <li class="menu__nav-item"><a href="http://amovie.designzway.com/typography.html">Typography</a></li>
+                                <li class="menu__nav-item"><a href="http://amovie.designzway.com/page-elements.html">Shortcodes</a></li>
+                                <li class="menu__nav-item"><a href="http://amovie.designzway.com/column.html">Columns</a></li>
+                                <li class="menu__nav-item"><a href="http://amovie.designzway.com/icon-font.html">Icons</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="sub-nav-toggle plus"></span>
+                            <a href="http://amovie.designzway.com/page-elements.html">Booking steps</a>
+                            <ul>
+                                <li class="menu__nav-item"><a href="http://amovie.designzway.com/book1.html">Booking step 1</a></li>
+                                <li class="menu__nav-item"><a href="http://amovie.designzway.com/book2.html">Booking step 2</a></li>
+                                <li class="menu__nav-item"><a href="http://amovie.designzway.com/book3-buy.html">Booking step 3 (buy)</a></li>
+                                <li class="menu__nav-item"><a href="http://amovie.designzway.com/book3-reserve.html">Booking step 3 (reserve)</a></li>
+                                <li class="menu__nav-item"><a href="http://amovie.designzway.com/book-final.html">Final ticket view</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="sub-nav-toggle plus"></span>
+                            <a href="http://amovie.designzway.com/gallery-four.html">Gallery</a>
+                            <ul>
+                                <li class="menu__nav-item"><a href="http://amovie.designzway.com/gallery-four.html">4 col gallery</a></li>
+                                <li class="menu__nav-item"><a href="http://amovie.designzway.com/gallery-three.html">3 col gallery</a></li>
+                                <li class="menu__nav-item"><a href="http://amovie.designzway.com/gallery-two.html">2 col gallery</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="sub-nav-toggle plus"></span>
+                            <a href="http://amovie.designzway.com/news-left.html">News</a>
+                            <ul>
+                                <li class="menu__nav-item"><a href="http://amovie.designzway.com/news-left.html">News (rigth sidebar)</a></li>
+                                <li class="menu__nav-item"><a href="http://amovie.designzway.com/news-right.html">News (left sidebar)</a></li>
+                                <li class="menu__nav-item"><a href="http://amovie.designzway.com/news-full.html">News (full widht)</a></li>
+                                <li class="menu__nav-item"><a href="http://amovie.designzway.com/single-page-left.html">Single post (rigth sidebar)</a></li>
+                                <li class="menu__nav-item"><a href="http://amovie.designzway.com/single-page-right.html">Single post (left sidebar)</a></li>
+                                <li class="menu__nav-item"><a href="http://amovie.designzway.com/single-page-full.html">Single post (full widht)</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="sub-nav-toggle plus"></span>
+                            <a href="http://amovie.designzway.com/#">Mega menu</a>
+                               <ul class="mega-menu container">
+                                    <li class="col-md-3 mega-menu__coloum">
+                                        <h4 class="mega-menu__heading">Now in the cinema</h4>
+                                         <ul class="mega-menu__list">
+                                            <li class="mega-menu__nav-item"><a href="http://amovie.designzway.com/#">The Counselor</a></li>
+                                            <li class="mega-menu__nav-item"><a href="http://amovie.designzway.com/#">Bad Grandpa</a></li>
+                                            <li class="mega-menu__nav-item"><a href="http://amovie.designzway.com/#">Blue Is the Warmest Color</a></li>
+                                            <li class="mega-menu__nav-item"><a href="http://amovie.designzway.com/#">Capital</a></li>
+                                            <li class="mega-menu__nav-item"><a href="http://amovie.designzway.com/#">Spinning Plates</a></li>
+                                            <li class="mega-menu__nav-item"><a href="http://amovie.designzway.com/#">Bastards</a></li>
+                                          </ul>
+                                      </li>
+                                        
+                                      <li class="col-md-3 mega-menu__coloum mega-menu__coloum--outheading">
+                                          <ul class="mega-menu__list">
+                                            <li class="mega-menu__nav-item"><a href="http://amovie.designzway.com/#">Gravity</a></li>
+                                            <li class="mega-menu__nav-item"><a href="http://amovie.designzway.com/#">Captain Phillips</a></li>
+                                            <li class="mega-menu__nav-item"><a href="http://amovie.designzway.com/#">Carrie</a></li>
+                                            <li class="mega-menu__nav-item"><a href="http://amovie.designzway.com/#">Cloudy with a Chance of Meatballs 2</a></li>
+                                          </ul>
+                                      </li>
+                                      
+                                      <li class="col-md-3 mega-menu__coloum">
+                                        <h4 class="mega-menu__heading">Ending soon</h4>
+                                          <ul class="mega-menu__list">
+                                            <li class="mega-menu__nav-item"><a href="http://amovie.designzway.com/#">Escape Plan</a></li>
+                                            <li class="mega-menu__nav-item"><a href="http://amovie.designzway.com/#">Rush</a></li>
+                                            <li class="mega-menu__nav-item"><a href="http://amovie.designzway.com/#">Prisoners</a></li>
+                                            <li class="mega-menu__nav-item"><a href="http://amovie.designzway.com/#">Enough Said</a></li>
+                                            <li class="mega-menu__nav-item"><a href="http://amovie.designzway.com/#">The Fifth Estate</a></li>
+                                            <li class="mega-menu__nav-item"><a href="http://amovie.designzway.com/#">Runner Runner</a></li>
+                                          </ul>
+                                      </li>
+                                    
+                                      <li class="col-md-3 mega-menu__coloum mega-menu__coloum--outheading">
+                                          <ul class="mega-menu__list">
+                                            <li class="mega-menu__nav-item"><a href="http://amovie.designzway.com/#">Insidious: Chapter 2</a></li>
+                                          </ul>
+                                      </li>
+                               </ul>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <!-- Additional header buttons / Auth and direct link to booking-->
+                <div class="control-panel">
+                    <div class="auth auth--home">
+                      <div class="auth__show">
+                        <span class="auth__image">
+                          <img alt="" src="{% static 'auth.png' %}">
+                        </span>
+                      </div>
+                      <a href="http://amovie.designzway.com/#" class="btn btn--sign btn--singin">
+                          me
+                      </a>
+                        <ul class="auth__function">
+                            <li><a href="http://amovie.designzway.com/#" class="auth__function-item">Watchlist</a></li>
+                            <li><a href="http://amovie.designzway.com/#" class="auth__function-item">Booked tickets</a></li>
+                            <li><a href="http://amovie.designzway.com/#" class="auth__function-item">Discussion</a></li>
+                            <li><a href="http://amovie.designzway.com/#" class="auth__function-item">Settings</a></li>
+                        </ul>
+
+                    </div>
+                    <a href="http://amovie.designzway.com/#" class="btn btn-md btn--warning btn--book btn-control--home login-window">Book a ticket</a>
+                </div>
+
+            </div>
+        </header>
+
+        <!-- Slider -->
+            <div class="bannercontainer" style="overflow: visible;">
+                    <div class="banner revslider-initialised tp-simpleresponsive" id="revslider-424" style="height: 500px;">
+                        <ul style="display: block; overflow: hidden; width: 100%; height: 100%; max-height: 500px;">
+
+                            <li data-transition="fade" data-slotamount="7" class="slide" data-slide="Rush." style="width: 100%; height: 100%; overflow: hidden; visibility: visible; left: 0px; top: 0px; z-index: 18; opacity: 1;">
+                                <div class="slotholder" style="width:100%;height:100%;" data-duration="undefined" data-zoomstart="undefined" data-zoomend="undefined" data-rotationstart="undefined" data-rotationend="undefined" data-ease="undefined" data-bgpositionend="undefined" data-bgposition="undefined" data-kenburns="undefined" data-easeme="undefined" data-bgfit="undefined" data-bgfitend="undefined" data-owidth="undefined" data-oheight="undefined"><div class="tp-bgimg defaultimg" data-lazyload="undefined" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat" data-lazydone="undefined" src="images/slides/first-slide.jpg" data-src="images/slides/first-slide.jpg" style="width: 100%; height: 100%; opacity: 0; position: relative; background-image: url(http://amovie.designzway.com/images/slides/first-slide.jpg); background-color: rgba(0, 0, 0, 0); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"></div></div>
+                                <div class="caption slide__name margin-slider tp-caption start splitted" data-x="right" data-y="80" data-splitin="chars" data-elementdelay="0.1" data-speed="700" data-start="1400" data-easing="easeOutBack" data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;" data-frames="{ typ :lines;
+                                                 elementdelay :0.1;
+                                                 start:1650;
+                                                 speed:500;
+                                                 ease:Power3.easeOut;
+                                                 animation:x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:1;transformPerspective:600;transformOrigin:50% 50%;
+                                                 },
+                                                 { typ :lines;
+                                                 elementdelay :0.1;
+                                                 start:2150;
+                                                 speed:500;
+                                                 ease:Power3.easeOut;
+                                                 animation:x:0;y:0;z:0;rotationX:00;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:1;transformPerspective:600;transformOrigin:50% 50%;
+                                                 }
+                                                 " data-splitout="lines" data-endelementdelay="0.1" data-customout="x:-230;y:0;z:0;rotationX:0;rotationY:0;rotationZ:90;scaleX:0.2;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%" data-endspeed="500" data-end="8400" data-endeasing="Back.easeIn" style="-webkit-transition: all 0s ease 0s; transition: all 0s ease 0s; min-height: 0px; min-width: 0px; line-height: 228px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-size: 80px; left: 1030.5px; top: 80px; visibility: visible; opacity: 0; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.00166, 0, 0, 0, 1); -webkit-transform: none;"><div class="tp-splitted" style="display: block; text-align: left; position: relative; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.00166, 0, 0, 0, 1);"><div style="position:relative;display:inline-block;" class="tp-splitted"><div style="position: relative; display: inline-block; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);" class="tp-splitted">
+</div></div> <div style="position:relative;display:inline-block;" class="tp-splitted">                                   <div style="position: relative; display: inline-block; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);" class="tp-splitted">R</div><div style="position: relative; display: inline-block; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);" class="tp-splitted">U</div><div style="position: relative; display: inline-block; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);" class="tp-splitted">S</div><div style="position: relative; display: inline-block; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);" class="tp-splitted">H</div><div style="position: relative; display: inline-block; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);" class="tp-splitted">
+</div></div> </div><div class="tp-splitted" style="display: block; text-align: left; position: relative; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.00166, 0, 0, 0, 1);"><div style="position:relative;display:inline-block;" class="tp-splitted">                               </div> </div></div>
+
+                                <div class="caption slide__time margin-slider sfr str tp-caption start" data-x="right" data-hoffset="-243" data-y="186" data-speed="300" data-start="2100" data-easing="easeOutBack" data-endspeed="300" data-end="8700" data-endeasing="Back.easeIn" style="-webkit-transition: all 0s ease 0s; transition: all 0s ease 0s; min-height: 0px; min-width: 0px; line-height: 0px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-size: 18px; left: 974.5px; top: 186px; visibility: visible; opacity: 0; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 50, 0, 0, 1); -webkit-transform: none;">
+                                     From
+                                 </div>
+                                <div class="caption slide__date margin-slider lfb ltb tp-caption start" data-x="right" data-hoffset="-149" data-y="186" data-speed="500" data-start="2400" data-easing="Power4.easeOut" data-endspeed="400" data-end="8200" data-endeasing="Back.easeIn" style="-webkit-transition: all 0s ease 0s; transition: all 0s ease 0s; min-height: 0px; min-width: 0px; line-height: 0px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-size: 18px; left: 1021.5px; top: 186px; visibility: visible; opacity: 0; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 560, 0, 1); -webkit-transform: none;">
+                                     October 18
+                                 </div>
+                                <div class="caption slide__time margin-slider sfr str tp-caption start" data-x="right" data-hoffset="-113" data-y="186" data-speed="300" data-start="2100" data-easing="easeOutBack" data-endspeed="300" data-end="8700" data-endeasing="Back.easeIn" style="-webkit-transition: all 0s ease 0s; transition: all 0s ease 0s; min-height: 0px; min-width: 0px; line-height: 0px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-size: 18px; left: 1117.5px; top: 186px; visibility: visible; opacity: 0; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 50, 0, 0, 1); -webkit-transform: none;">
+                                     - till
+                                 </div>
+                                <div class="caption slide__date margin-slider lfb ltb tp-caption start" data-x="right" data-y="186" data-speed="500" data-start="2800" data-easing="Power4.easeOut" data-endspeed="400" data-end="8200" data-endeasing="Back.easeIn" style="-webkit-transition: all 0s ease 0s; transition: all 0s ease 0s; min-height: 0px; min-width: 0px; line-height: 0px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-size: 18px; left: 1151.5px; top: 186px; visibility: visible; opacity: 0; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 560, 0, 1); -webkit-transform: none;">
+                                     November 01
+                                 </div>
+                                <div class="caption slide__text margin-slider customin customout tp-caption start" data-x="right" data-y="250" data-customin="x:0;y:100;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:3;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:0% 0%;" data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="400" data-start="3000" data-endspeed="400" data-end="8000" data-endeasing="Back.easeIn" style="-webkit-transition: all 0s ease 0s; transition: all 0s ease 0s; min-height: 0px; min-width: 0px; line-height: 21px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-size: 14px; left: 633.5px; top: 250px; visibility: visible; opacity: 0; transform: matrix3d(0.75, 0, 0, 0, 0, 0.75, 0, 0, 0, 0, 1, -0.00166, 0, 0, 0, 1); -webkit-transform: none; transform-origin: 50% 50% 0px;">
+                                     Two-time Academy Award winner Ron Howard, teams once again with fellow two-time Academy<br> Award nominee, writer Peter Morgan , on Rush, a spectacular big-screen re-creation of the merciless<br> 1970s rivalry between James Hunt and Niki Lauda.
+                                 </div>
+                                <div class="caption margin-slider skewfromright customout  tp-caption start" data-x="right" data-y="324" data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="400" data-start="3300" data-easing="Power4.easeOut" data-endspeed="300" data-end="7700" data-endeasing="Power4.easeOut" style="-webkit-transition: all 0s ease 0s; transition: all 0s ease 0s; min-height: 0px; min-width: 0px; line-height: 40px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-size: 14px; left: 1015.5px; top: 324px; visibility: visible; opacity: 0; transform: matrix3d(0.75, 0, 0, 0, 0, 0.75, 0, 0, 0, 0, 1, -0.00166, 0, 0, 0, 1); -webkit-transform: none; transform-origin: 50% 50% 0px;">
+                                     <a href="http://amovie.designzway.com/index.html#" class="slide__link">check out cinemas &amp; time</a>
+                                 </div>
+                            </li>
+
+                            <li data-transition="fade" data-slotamount="7" class="slide fading-slide" data-slide="Travel worldwide.
+Create trip film." style="width: 100%; height: 100%; overflow: hidden; visibility: visible; left: 0px; top: 0px; z-index: 18; opacity: 1;">
+                                <div class="slotholder" style="width:100%;height:100%;" data-duration="undefined" data-zoomstart="undefined" data-zoomend="undefined" data-rotationstart="undefined" data-rotationend="undefined" data-ease="undefined" data-bgpositionend="undefined" data-bgposition="undefined" data-kenburns="undefined" data-easeme="undefined" data-bgfit="undefined" data-bgfitend="undefined" data-owidth="undefined" data-oheight="undefined"><div class="tp-bgimg defaultimg" data-lazyload="undefined" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat" data-lazydone="undefined" src="images/bg-video.jpg" data-src="images/bg-video.jpg" style="width: 100%; height: 100%; opacity: 0; position: relative; background-image: url(http://amovie.designzway.com/images/bg-video.jpg); background-color: rgba(0, 0, 0, 0); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"></div></div>
+                                 <div class="caption slide__video tp-caption start" data-x="0" data-y="0" data-autoplay="true" style="font-size: 14px; padding: 0px; margin: 0px; border: 0px; line-height: 20px; height: 1080px; left: 89.5px; top: 0px; visibility: visible; opacity: 0; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.00166, 0, 0, 0, 1); -webkit-transform: none;">
+                                   <div class="html5vid" style="position:relative;top:0px;left:0px;width:auto;height:auto"><video class="media-element HasListener" autoplay="autoplay" preload="" loop="loop" muted="" src="video/TravelIs.mp4" style="display: block; width: 1920px; height: 1080px;">
+                                        <source type="video/webm" src="video/TravelIs.webm">
+                                        <source type="video/mp4" src="video/TravelIs.mp4">
+                                        <source type="video/ogg" src="video/TravelIs.ogv">
+                                    </video><div class="tp-video-play-button"><i class="revicon-right-dir"></i><div class="tp-revstop"></div></div></div>
+                                  </div>
+
+                                  <div class="caption slide__name slide__name--smaller tp-caption start splitted" data-x="left" data-y="160" data-splitin="chars" data-elementdelay="0.1" data-speed="700" data-start="1400" data-easing="easeOutBack" data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;" data-frames="{ typ :lines;
+                                                 elementdelay :0.1;
+                                                 start:1650;
+                                                 speed:500;
+                                                 ease:Power3.easeOut;
+                                                 animation:x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:1;transformPerspective:600;transformOrigin:50% 50%;
+                                                 },
+                                                 { typ :lines;
+                                                 elementdelay :0.1;
+                                                 start:2150;
+                                                 speed:500;
+                                                 ease:Power3.easeOut;
+                                                 animation:x:0;y:0;z:0;rotationX:00;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:1;transformPerspective:600;transformOrigin:50% 50%;
+                                                 }
+                                                 " data-splitout="lines" data-endelementdelay="0.1" data-customout="x:-230;y:0;z:0;rotationX:0;rotationY:0;rotationZ:90;scaleX:0.2;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%" data-endspeed="500" data-endeasing="Back.easeIn" style="-webkit-transition: all 0s ease 0s; transition: all 0s ease 0s; min-height: 0px; min-width: 0px; line-height: 85px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-size: 60px; left: 89.5px; top: 160px; visibility: visible; opacity: 0; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.00166, 0, 0, 0, 1); -webkit-transform: none;"><div class="tp-splitted" style="display: block; text-align: center; position: relative; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.00166, 0, 0, 0, 1);"><div style="position:relative;display:inline-block;" class="tp-splitted"><div style="position: relative; display: inline-block; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);" class="tp-splitted">
+</div></div> <div style="position:relative;display:inline-block;" class="tp-splitted">                                   <div style="position: relative; display: inline-block; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);" class="tp-splitted">T</div><div style="position: relative; display: inline-block; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);" class="tp-splitted">r</div><div style="position: relative; display: inline-block; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);" class="tp-splitted">a</div><div style="position: relative; display: inline-block; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);" class="tp-splitted">v</div><div style="position: relative; display: inline-block; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);" class="tp-splitted">e</div><div style="position: relative; display: inline-block; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);" class="tp-splitted">l</div><div style="position: relative; display: inline-block; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);" class="tp-splitted">,</div></div> <div style="position:relative;display:inline-block;" class="tp-splitted"><div style="position: relative; display: inline-block; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);" class="tp-splitted">A</div><div style="position: relative; display: inline-block; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);" class="tp-splitted">d</div><div style="position: relative; display: inline-block; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);" class="tp-splitted">m</div><div style="position: relative; display: inline-block; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);" class="tp-splitted">i</div><div style="position: relative; display: inline-block; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);" class="tp-splitted">r</div><div style="position: relative; display: inline-block; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);" class="tp-splitted">e</div><div style="position: relative; display: inline-block; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);" class="tp-splitted">,</div></div> <div style="position:relative;display:inline-block;" class="tp-splitted"><div style="position: relative; display: inline-block; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);" class="tp-splitted">R</div><div style="position: relative; display: inline-block; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);" class="tp-splitted">e</div><div style="position: relative; display: inline-block; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);" class="tp-splitted">m</div><div style="position: relative; display: inline-block; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);" class="tp-splitted">e</div><div style="position: relative; display: inline-block; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);" class="tp-splitted">m</div><div style="position: relative; display: inline-block; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);" class="tp-splitted">b</div><div style="position: relative; display: inline-block; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);" class="tp-splitted">e</div><div style="position: relative; display: inline-block; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);" class="tp-splitted">r</div><div style="position: relative; display: inline-block; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);" class="tp-splitted">.</div><div style="position: relative; display: inline-block; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);" class="tp-splitted">
+</div></div> </div><div class="tp-splitted" style="display: block; text-align: center; position: relative; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.00166, 0, 0, 0, 1);"><div style="position:relative;display:inline-block;" class="tp-splitted">                               </div> </div></div>
+
+                                <div class="caption slide__time position-center postion-place--one sfr stl tp-caption start" data-x="left" data-y="242" data-speed="300" data-start="2100" data-easing="easeOutBack" data-endspeed="300" data-endeasing="Back.easeIn" style="-webkit-transition: all 0s ease 0s; transition: all 0s ease 0s; min-height: 0px; min-width: 0px; line-height: 0px; border-width: 0px; margin: 0px 0px 0px -90px; padding: 0px; letter-spacing: 0px; font-size: 18px; left: 89.5px; top: 242px; visibility: visible; opacity: 0; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, -50, 0, 0, 1); -webkit-transform: none;">
+                                     From
+                                 </div>
+                                <div class="caption slide__date position-center postion-place--two lfb ltb tp-caption start" data-x="left" data-y="242" data-speed="500" data-start="2400" data-easing="Power4.easeOut" data-endspeed="400" data-endeasing="Back.easeIn" style="-webkit-transition: all 0s ease 0s; transition: all 0s ease 0s; min-height: 0px; min-width: 0px; line-height: 0px; border-width: 0px; margin: 0px 0px 0px -32px; padding: 0px; letter-spacing: 0px; font-size: 18px; left: 89.5px; top: 242px; visibility: visible; opacity: 0; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 560, 0, 1); -webkit-transform: none;">
+                                     April 18 
+                                 </div>
+                                <div class="caption slide__time position-center postion-place--three sfr stl tp-caption start" data-x="left" data-y="242" data-speed="300" data-start="2100" data-easing="easeOutBack" data-endspeed="300" data-endeasing="Back.easeIn" style="-webkit-transition: all 0s ease 0s; transition: all 0s ease 0s; min-height: 0px; min-width: 0px; line-height: 0px; border-width: 0px; margin: 0px 0px 0px 20px; padding: 0px; letter-spacing: 0px; font-size: 18px; left: 89.5px; top: 242px; visibility: visible; opacity: 0; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, -50, 0, 0, 1); -webkit-transform: none;">
+                                     - till
+                                 </div>
+                                <div class="caption slide__date position-center postion-place--four lfb ltb tp-caption start" data-x="left" data-y="242" data-speed="500" data-start="2800" data-easing="Power4.easeOut" data-endspeed="400" data-endeasing="Back.easeIn" style="-webkit-transition: all 0s ease 0s; transition: all 0s ease 0s; min-height: 0px; min-width: 0px; line-height: 0px; border-width: 0px; margin: 0px 0px 0px 70px; padding: 0px; letter-spacing: 0px; font-size: 18px; left: 89.5px; top: 242px; visibility: visible; opacity: 0; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 560, 0, 1); -webkit-transform: none;">
+                                     May 01
+                                 </div>
+
+                                 <div class="caption lfb slider-wrap-btn ltb tp-caption start" data-x="left" data-y="310" data-speed="400" data-start="3300" data-easing="Power4.easeOut" data-endspeed="500" data-endeasing="Power4.easeOut" style="-webkit-transition: all 0s ease 0s; transition: all 0s ease 0s; min-height: 0px; min-width: 0px; line-height: 20px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-size: 14px; left: 89.5px; top: 310px; visibility: visible; opacity: 0; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 560, 0, 1); -webkit-transform: none;">
+                                     <a href="http://amovie.designzway.com/index.html#" class="btn btn-md btn--danger btn--wide slider--btn">learn more</a>
+                                 </div>
+                            </li>
+
+                            <li data-transition="fade" data-slotamount="7" class="slide" data-slide="Stop wishing. 
+Start doing." style="width: 100%; height: 100%; overflow: hidden; visibility: visible; left: 0px; top: 0px; z-index: 20; opacity: 1;">
+                                <div class="slotholder" style="width:100%;height:100%;" data-duration="undefined" data-zoomstart="undefined" data-zoomend="undefined" data-rotationstart="undefined" data-rotationend="undefined" data-ease="undefined" data-bgpositionend="undefined" data-bgposition="undefined" data-kenburns="undefined" data-easeme="undefined" data-bgfit="undefined" data-bgfitend="undefined" data-owidth="undefined" data-oheight="undefined"><div class="tp-bgimg defaultimg" data-lazyload="undefined" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat" data-lazydone="undefined" src="images/slides/next-slide.jpg" data-src="images/slides/next-slide.jpg" style="width: 100%; height: 100%; opacity: 1; position: relative; background-image: url(http://amovie.designzway.com/images/slides/next-slide.jpg); background-color: rgba(0, 0, 0, 0); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"></div></div>
+                                 <div class="caption slide__name slide__name--smaller slide__name--specific customin customout tp-caption start" data-x="left" data-y="160" data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;" data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="700" data-start="1400" data-easing="easeOutBack" data-endspeed="500" data-end="8600" data-endeasing="Back.easeIn" style="-webkit-transition: all 0s ease 0s; transition: all 0s ease 0s; min-height: 0px; min-width: 0px; line-height: 85px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-size: 60px; left: 89.5px; top: 160px; visibility: visible; opacity: 0.844650861035506; transform: matrix3d(0.96116, 0, 0, 0, 0, 0.96116, 0, 0, 0, 0, 1, -0.00166, 0, 0, 0, 1); -webkit-transform: none; transform-origin: 50% 50% 0px;">
+                                    Stop <span class="highlight">wishing.</span> Start <span class="highlight">doing.</span> 
+                                </div>
+
+                                  <div class="caption slide__descript customin customout tp-caption start" data-x="left" data-y="240" data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;" data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="700" data-start="2000" data-endspeed="500" data-end="8400" data-endeasing="Back.easeIn" style="-webkit-transition: all 0s ease 0s; transition: all 0s ease 0s; min-height: 0px; min-width: 0px; line-height: 31px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-size: 22px; left: 89.5px; top: 240px; visibility: visible; opacity: 0; transform: matrix3d(0.75, 0, 0, 0, 0, 0.75, 0, 0, 0, 0, 1, -0.00166, 0, 0, 0, 1); -webkit-transform: none; transform-origin: 50% 50% 0px;">
+                                     find your best match movie with A.MOVIE
+                                 </div>
+
+                                 <div class="caption lfb customout slider-wrap-btn tp-caption start" data-x="left" data-y="310" data-speed="500" data-start="2800" data-easing="Power4.easeOut" data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-endspeed="400" data-end="8000" data-endeasing="Power4.easeOut" style="-webkit-transition: all 0s ease 0s; transition: all 0s ease 0s; min-height: 0px; min-width: 0px; line-height: 20px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-size: 14px; left: 89.5px; top: 310px; visibility: visible; opacity: 0; transform: matrix3d(0.75, 0, 0, 0, 0, 0.75, 0, 0, 0, 0, 1, -0.00166, 0, 0, 0, 1); -webkit-transform: none; transform-origin: 50% 50% 0px;">
+                                     <a href="http://amovie.designzway.com/index.html#" class="btn btn-md btn--danger slider--btn">check out movies</a>
+                                 </div>
+                            </li>
+
+                        </ul>
+                    <div class="tp-loader spinner0" style="visibility: hidden; opacity: 0;"><div class="dot1"></div><div class="dot2"></div><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div><div class="tp-bannertimer" style="visibility: hidden; width: 0%;"></div></div>
+                <div style="position: absolute; top: 250px; margin-top: -60px; left: 0px;" class="tp-leftarrow tparrows default"><span class="slider__info">Travel worldwide.
+Create trip film.</span></div><div style="position: absolute; top: 250px; margin-top: -17px; right: 0px;" class="tp-rightarrow tparrows default"><span class="slider__info">Rush.</span></div></div>
+
+        <!--end slider -->
+        
+        
+        <!-- Main content -->
+        <section class="container">
+            <div class="movie-best">
+                 <div class="col-sm-10 col-sm-offset-1 movie-best__rating">Today Best choice</div>
+                 <div class="col-sm-12 change--col">
+                     <div class="movie-beta__item ">
+                        <img alt="" src="{% static 'img/movie-sample1.jpg' %}" class = 'img-responsive'>
+                         <span class="best-rate">5.0</span>
+
+                         <ul class="movie-beta__info">
+                             <li><span class="best-voted">71 people voted today</span></li>
+                             <li>
+                                <p class="movie__time">169 min</p>
+                                <p>Adventure | Drama | Fantasy </p>
+                                <p>38 comments</p>
+                             </li>
+                             <li class="last-block">
+                                 <a href="http://amovie.designzway.com/movie-page-left.html" class="slide__link">more</a>
+                             </li>
+                         </ul>
+                     </div>
+                     <div class="movie-beta__item second--item">
+                         <img alt="" src="{% static 'img/movie-sample2.jpg' %}">
+                         <span class="best-rate">5.0</span>
+
+                         <ul class="movie-beta__info">
+                             <li><span class="best-voted">71 people voted today</span></li>
+                             <li>
+                                <p class="movie__time">169 min</p>
+                                <p>Adventure | Drama | Fantasy </p>
+                                <p>38 comments</p>
+                             </li>
+                             <li class="last-block">
+                                 <a href="http://amovie.designzway.com/movie-page-left.html" class="slide__link">more</a>
+                             </li>
+                         </ul>
+                     </div>
+                     <div class="movie-beta__item third--item">
+                         <img alt="" src="{% static 'img/movie-sample3.jpg' %}">
+                         <span class="best-rate">5.0</span>
+
+                         <ul class="movie-beta__info">
+                             <li><span class="best-voted">71 people voted today</span></li>
+                             <li>
+                                <p class="movie__time">169 min</p>
+                                <p>Adventure | Drama | Fantasy </p>
+                                <p>38 comments</p>
+                             </li>
+                             <li class="last-block">
+                                 <a href="http://amovie.designzway.com/movie-page-left.html" class="slide__link">more</a>
+                             </li>
+                         </ul>
+                     </div>
+                     <div class="movie-beta__item hidden-xs">
+                         <img alt="" src="{% static 'img/movie-sample4.jpg' %}">
+                         <span class="best-rate">5.0</span>
+
+                         <ul class="movie-beta__info">
+                             <li><span class="best-voted">71 people voted today</span></li>
+                             <li>
+                                <p class="movie__time">169 min</p>
+                                <p>Adventure | Drama | Fantasy </p>
+                                <p>38 comments</p>
+                             </li>
+                             <li class="last-block">
+                                 <a href="http://amovie.designzway.com/movie-page-left.html" class="slide__link">more</a>
+                             </li>
+                         </ul>
+                     </div>
+                     <div class="movie-beta__item hidden-xs hidden-sm">
+                         <img alt="" src="{% static 'img/movie-sample5.jpg' %}">
+                         <span class="best-rate">5.0</span>
+
+                         <ul class="movie-beta__info">
+                             <li><span class="best-voted">71 people voted today</span></li>
+                             <li>
+                                <p class="movie__time">169 min</p>
+                                <p>Adventure | Drama | Fantasy </p>
+                                <p>38 comments</p>
+                             </li>
+                             <li class="last-block">
+                                 <a href="http://amovie.designzway.com/movie-page-left.html" class="slide__link">more</a>
+                             </li>
+                         </ul>
+                     </div>
+                     <div class="movie-beta__item hidden-xs hidden-sm">
+                         <img alt="" src="{% static 'img/movie-sample6.jpg' %}">
+                         <span class="best-rate">5.0</span>
+
+                         <ul class="movie-beta__info">
+                             <li><span class="best-voted">71 people voted today</span></li>
+                             <li>
+                                <p class="movie__time">169 min</p>
+                                <p>Adventure | Drama | Fantasy </p>
+                                <p>38 comments</p>
+                             </li>
+                             <li class="last-block">
+                                 <a href="http://amovie.designzway.com/movie-page-left.html" class="slide__link">more</a>
+                             </li>
+                         </ul>
+                     </div>
+                 </div>
+                <div class="col-sm-10 col-sm-offset-1 movie-best__check">check all movies now playing</div>
+            </div>
+
+            <div class="col-sm-12">
+                <div class="mega-select-present mega-select-top mega-select--full">
+                    <div class="mega-select-marker">
+                        <div class="marker-indecator location" style="display: block;">
+                            <p class="select-marker"><span>movie to watch now</span> <br>in your city</p>
+                        </div>
+
+                        <div class="marker-indecator cinema" style="display: none;">
+                            <p class="select-marker"><span>find your </span> <br>cinema</p>
+                        </div>
+
+                        <div class="marker-indecator film-category" style="display: none;">
+                            <p class="select-marker"><span>find movie due to </span> <br> your mood</p>
+                        </div>
+
+                        <div class="marker-indecator actors" style="display: none;">
+                            <p class="select-marker"><span> like particular stars</span> <br>find them</p>
+                        </div>
+
+                        <div class="marker-indecator director" style="display: none;">
+                            <p class="select-marker"><span>admire personalities - find </span> <br>by director</p>
+                        </div>
+
+                        <div class="marker-indecator country" style="display: none;">
+                            <p class="select-marker"><span>search for movie from certain </span> <br>country?</p>
+                        </div>
+                    </div>
+
+                      <div class="mega-select pull-right">
+                          <span class="mega-select__point">Search by</span>
+                          <ul class="mega-select__sort">
+                              <li class="filter-wrap"><a href="http://amovie.designzway.com/#" class="mega-select__filter filter--active" data-filter="location">Location</a></li>
+                              <li class="filter-wrap"><a href="http://amovie.designzway.com/#" class="mega-select__filter" data-filter="cinema">Cinema</a></li>
+                              <li class="filter-wrap"><a href="http://amovie.designzway.com/#" class="mega-select__filter" data-filter="film-category">Category</a></li>
+                              <li class="filter-wrap"><a href="http://amovie.designzway.com/#" class="mega-select__filter" data-filter="actors">Actors</a></li>
+                              <li class="filter-wrap"><a href="http://amovie.designzway.com/#" class="mega-select__filter" data-filter="director">Director</a></li>
+                              <li class="filter-wrap"><a href="http://amovie.designzway.com/#" class="mega-select__filter" data-filter="country">Country</a></li>
+                          </ul>
+
+                          <input name="search-input" type="text" class="select__field">
+                          
+                          <div class="select__btn">
+                            <a href="http://amovie.designzway.com/#" class="btn btn-md btn--danger location" style="display: inline-block;">find <span class="hidden-exrtasm">your city</span></a>
+                            <a href="http://amovie.designzway.com/#" class="btn btn-md btn--danger cinema" style="display: none;">find <span class="hidden-exrtasm">suitable cimema</span></a>
+                            <a href="http://amovie.designzway.com/#" class="btn btn-md btn--danger film-category" style="display: none;">find <span class="hidden-exrtasm">best category</span></a>
+                            <a href="http://amovie.designzway.com/#" class="btn btn-md btn--danger actors" style="display: none;">find <span class="hidden-exrtasm">talented actors</span></a>
+                            <a href="http://amovie.designzway.com/#" class="btn btn-md btn--danger director" style="display: none;">find <span class="hidden-exrtasm">favorite director</span></a>
+                            <a href="http://amovie.designzway.com/#" class="btn btn-md btn--danger country" style="display: none;">find <span class="hidden-exrtasm">produced country</span></a>
+                          </div>
+
+                          <div class="select__dropdowns">
+                              <ul class="select__group location active-dropdown" style="display: block; z-index: -1;">
+                                <li class="select__variant" data-value="London">London</li>
+                                <li class="select__variant" data-value="New York">New York</li>
+                                <li class="select__variant" data-value="Paris">Paris</li>
+                                <li class="select__variant" data-value="Berlin">Berlin</li>
+                                <li class="select__variant" data-value="Moscow">Moscow</li>
+                                <li class="select__variant" data-value="Minsk">Minsk</li>
+                                <li class="select__variant" data-value="Warsawa">Warsawa</li>
+                              </ul>
+
+                              <ul class="select__group cinema" style="display: none;">
+                                <li class="select__variant" data-value="Cineworld">Cineworld</li>
+                                <li class="select__variant" data-value="Empire">Empire</li>
+                                <li class="select__variant" data-value="Everyman">Everyman</li>
+                                <li class="select__variant" data-value="Odeon">Odeon</li>
+                                <li class="select__variant" data-value="Picturehouse">Picturehouse</li>
+                              </ul>
+
+                              <ul class="select__group film-category" style="display: none;">
+                                <li class="select__variant" data-value="Children&#39;s">Children's</li>
+                                <li class="select__variant" data-value="Comedy">Comedy</li>
+                                <li class="select__variant" data-value="Drama">Drama</li>
+                                <li class="select__variant" data-value="Fantasy">Fantasy</li>
+                                <li class="select__variant" data-value="Horror">Horror</li>
+                                <li class="select__variant" data-value="Thriller">Thriller</li>
+                              </ul>
+
+                              <ul class="select__group actors" style="display: none;">
+                                <li class="select__variant" data-value="Leonardo DiCaprio">Leonardo DiCaprio</li>
+                                <li class="select__variant" data-value="Johnny Depp">Johnny Depp</li>
+                                <li class="select__variant" data-value="Jack Nicholson">Jack Nicholson</li>
+                                <li class="select__variant" data-value="Robert De Niro">Robert De Niro</li>
+                                <li class="select__variant" data-value="Morgan Freeman">Morgan Freeman</li>
+                                <li class="select__variant" data-value="Jim Carrey">Jim Carrey</li>
+                                <li class="select__variant" data-value="Adam Sandler">Adam Sandler</li>
+                                <li class="select__variant" data-value="Ben Stiller">Ben Stiller</li>
+                              </ul>
+
+                              <ul class="select__group director" style="display: none;">
+                                <li class="select__variant" data-value="Steven Spielberg">Steven Spielberg</li>
+                                <li class="select__variant" data-value="Martin Scorsese">Martin Scorsese</li>
+                                <li class="select__variant" data-value="Guy Ritchie">Guy Ritchie</li>
+                                <li class="select__variant" data-value="Christopher Nolan">Christopher Nolan</li>
+                                <li class="select__variant" data-value="Tim Burton">Tim Burton</li>
+                              </ul>
+
+                              <ul class="select__group country" style="display: none;">
+                                <li class="select__variant" data-value="USA">USA</li>
+                                <li class="select__variant" data-value="Germany">Germany</li>
+                                <li class="select__variant" data-value="Australia">Australia</li>
+                                <li class="select__variant" data-value="UK">UK</li>
+                                <li class="select__variant" data-value="Japan">Japan</li>
+                                <li class="select__variant" data-value="Serbia">Serbia</li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+            </div>
+            
+            <div class="clearfix"></div>
+
+            <h2 id="target" class="page-heading heading--outcontainer">Now in the cinema</h2>
+
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-8 col-md-9">
+                        <!-- Movie variant with time 
+                            <div class="movie movie--test movie--test--dark movie--test--left">
+                                <div class="movie__images">
+                                    <a href="http://amovie.designzway.com/movie-page-left.html" class="movie-beta__link">
+                                        <img alt="" src="{% static 'img/movie-time8.jpg' %}">
+                                    </a>
+                                </div>
+
+                                <div class="movie__info">
+                                    <a href="http://amovie.designzway.com/movie-page-left.html" class="movie__title">Gravity (2013)  </a>
+
+                                    <p class="movie__time">91 min</p>
+
+                                    <p class="movie__option"><a href="http://amovie.designzway.com/#">Sci-Fi</a> | <a href="http://amovie.designzway.com/#">Thriller</a> | <a href="http://amovie.designzway.com/#">Drama</a></p>
+                                    
+                                    <div class="movie__rate">
+                                        <div class="score" style="cursor: pointer; width: 130px;"><img src="./frontpage_files/star-off.svg" alt="1" title="bad">&nbsp;<img src="./frontpage_files/star-off.svg" alt="2" title="poor">&nbsp;<img src="./frontpage_files/star-off.svg" alt="3" title="regular">&nbsp;<img src="./frontpage_files/star-off.svg" alt="4" title="good">&nbsp;<img src="./frontpage_files/star-off.svg" alt="5" title="gorgeous"><input type="hidden" name="score"></div>
+                                        <span class="movie__rating">4.1</span>
+                                    </div>               
+                                </div>
+                            </div>
+                          Movie variant with time -->
+
+                         <!-- Movie variant with time 
+                            <div class="movie movie--test movie--test--light movie--test--left">
+                                <div class="movie__images">
+                                    <a href="http://amovie.designzway.com/movie-page-left.html" class="movie-beta__link">
+                                    <img alt="" src="{% static 'img/movie-time1.jpg' %}">
+                                    </a>
+                                </div>
+
+                                <div class="movie__info">
+                                    <a href="http://amovie.designzway.com/movie-page-left.html" class="movie__title">The Hobbit: The Desolation of Smaug (2013)  </a>
+
+                                    <p class="movie__time">169 min</p>
+
+                                    <p class="movie__option"><a href="http://amovie.designzway.com/#">Adventure</a> | <a href="http://amovie.designzway.com/#">Fantasy</a> | <a href="http://amovie.designzway.com/#">Drama</a></p>
+                                    
+                                    <div class="movie__rate">
+                                        <div class="score" style="cursor: pointer; width: 130px;"><img src="./frontpage_files/star-off.svg" alt="1" title="bad">&nbsp;<img src="./frontpage_files/star-off.svg" alt="2" title="poor">&nbsp;<img src="./frontpage_files/star-off.svg" alt="3" title="regular">&nbsp;<img src="./frontpage_files/star-off.svg" alt="4" title="good">&nbsp;<img src="./frontpage_files/star-off.svg" alt="5" title="gorgeous"><input type="hidden" name="score"></div>
+                                        <span class="movie__rating">5.0</span>
+                                    </div>               
+                                </div>
+                            </div>
+                         Movie variant with time -->
+
+                         <!-- Movie variant with time 
+                            <div class="movie movie--test movie--test--light movie--test--right">
+                                <div class="movie__images">
+                                    <a href="http://amovie.designzway.com/movie-page-left.html" class="movie-beta__link">
+                                    <img alt="" src="./frontpage_files/movie-time9.jpg">
+                                    </a>
+                                </div>
+
+                                <div class="movie__info">
+                                    <a href="http://amovie.designzway.com/movie-page-left.html" class="movie__title">The Hunger Games: Catching Fire (2013)   </a>
+
+                                    <p class="movie__time">146 min</p>
+
+                                    <p class="movie__option"><a href="http://amovie.designzway.com/#">Action</a> | <a href="http://amovie.designzway.com/#">Adventure</a> | <a href="http://amovie.designzway.com/#">Sci-Fi</a></p>
+                                    
+                                    <div class="movie__rate">
+                                        <div class="score" style="cursor: pointer; width: 130px;"><img src="./frontpage_files/star-off.svg" alt="1" title="bad">&nbsp;<img src="./frontpage_files/star-off.svg" alt="2" title="poor">&nbsp;<img src="./frontpage_files/star-off.svg" alt="3" title="regular">&nbsp;<img src="./frontpage_files/star-off.svg" alt="4" title="good">&nbsp;<img src="./frontpage_files/star-off.svg" alt="5" title="gorgeous"><input type="hidden" name="score"></div>
+                                        <span class="movie__rating">4.9</span>
+                                    </div>               
+                                </div>
+                            </div>
+                          Movie variant with time -->
+
+                         <!-- Movie variant with time -->
+                            <div class="movie movie--test movie--test--dark movie--test--right">
+                                <div class="movie__images">
+                                    <a href="http://amovie.designzway.com/movie-page-left.html" class="movie-beta__link">
+                                    <img alt="" src="{% static 'img/movie-time10.jpg' %}">
+                                    </a>
+                                </div>
+
+                                <div class="movie__info">
+                                    <a href="http://amovie.designzway.com/movie-page-left.html" class="movie__title">Thor: The Dark World (2013) </a>
+
+                                    <p class="movie__time">112 min</p>
+
+                                    <p class="movie__option"><a href="http://amovie.designzway.com/#">Action</a> | <a href="http://amovie.designzway.com/#">Adventure</a> | <a href="http://amovie.designzway.com/#">Fantasy</a></p>
+                                    
+                                    <div class="movie__rate">
+                                        <div class="score" style="cursor: pointer; width: 130px;"><img src="{% static 'star-off.svg' %}" alt="1" title="bad">&nbsp;<img src="{% static 'star-off.svg' %}" alt="2" title="poor">&nbsp;<img src="{% static 'star-off.svg' %}" alt="3" title="regular">&nbsp;<img src="{% static 'star-off.svg' %}" alt="4" title="good">&nbsp;<img src="{% static 'star-off.svg' %}" alt="5" title="gorgeous"><input type="hidden" name="score"></div>
+                                        <span class="movie__rating">5.0</span>
+                                    </div>               
+                                </div>
+                            </div>
+                         <!-- Movie variant with time -->
+
+                         <!-- Movie variant with time -->
+                            <div class="movie movie--test movie--test--dark movie--test--left">
+                                <div class="movie__images">
+                                    <a href="http://amovie.designzway.com/movie-page-left.html" class="movie-beta__link">
+                                    <img alt="" src="{% static 'movie-time11.jpg' %}">
+                                    </a>
+                                </div>
+
+                                <div class="movie__info">
+                                    <a href="http://amovie.designzway.com/movie-page-left.html" class="movie__title">World War Z (2013)  </a>
+
+                                    <p class="movie__time">116 min</p>
+
+                                    <p class="movie__option"><a href="http://amovie.designzway.com/#">Action</a> | <a href="http://amovie.designzway.com/#">Adventure</a> | <a href="http://amovie.designzway.com/#">Horror</a></p>
+                                    
+                                    <div class="movie__rate">
+                                        <div class="score" style="cursor: pointer; width: 130px;"><img src="{% static 'star-off.svg' %}" alt="1" title="bad">&nbsp;<img src="{% static 'star-off.svg' %}" alt="2" title="poor">&nbsp;<img src="{% static 'star-off.svg' %}" alt="3" title="regular">&nbsp;<img src="{% static 'star-off.svg' %}" alt="4" title="good">&nbsp;<img src="{% static 'star-off.svg' %}" alt="5" title="gorgeous"><input type="hidden" name="score"></div>
+                                        <span class="movie__rating">4.1</span>
+                                    </div>               
+                                </div>
+                            </div>
+                         <!-- Movie variant with time -->
+
+                         <!-- Movie variant with time 
+                            <div class="movie movie--test movie--test--light movie--test--left">
+                                <div class="movie__images">
+                                    <a href="http://amovie.designzway.com/movie-page-left.html" class="movie-beta__link">
+                                    <img alt="" src="./frontpage_files/movie-time12.jpg">
+                                    </a>
+                                </div>
+
+                                <div class="movie__info">
+                                    <a href="http://amovie.designzway.com/movie-page-left.html" class="movie__title">Prisoners (2013) </a>
+
+                                    <p class="movie__time">153 min</p>
+
+                                    <p class="movie__option"><a href="http://amovie.designzway.com/#">Crime</a> | <a href="http://amovie.designzway.com/#">Thriller</a> | <a href="http://amovie.designzway.com/#">Drama</a></p>
+                                    
+                                    <div class="movie__rate">
+                                        <div class="score" style="cursor: pointer; width: 130px;"><img src="./frontpage_files/star-off.svg" alt="1" title="bad">&nbsp;<img src="./frontpage_files/star-off.svg" alt="2" title="poor">&nbsp;<img src="./frontpage_files/star-off.svg" alt="3" title="regular">&nbsp;<img src="./frontpage_files/star-off.svg" alt="4" title="good">&nbsp;<img src="./frontpage_files/star-off.svg" alt="5" title="gorgeous"><input type="hidden" name="score"></div>
+                                        <span class="movie__rating">5.0</span>
+                                    </div>               
+                                </div>
+                            </div>
+                          Movie variant with time -->
+
+                         <!-- Movie variant with time 
+                            <div class="movie movie--test movie--test--light movie--test--right">
+                                <div class="movie__images">
+                                    <a href="http://amovie.designzway.com/movie-page-left.html" class="movie-beta__link">
+                                    <img alt="" src="./frontpage_files/movie-time13.jpg">
+                                    </a>
+                                </div>
+
+                                <div class="movie__info">
+                                    <a href="http://amovie.designzway.com/movie-page-left.html" class="movie__title">This Is the End (2013)   </a>
+
+                                    <p class="movie__time">107 min</p>
+
+                                    <p class="movie__option"><a href="http://amovie.designzway.com/#">Comedy</a> | <a href="http://amovie.designzway.com/#">Fantasy</a></p>
+                                    
+                                    <div class="movie__rate">
+                                        <div class="score" style="cursor: pointer; width: 130px;"><img src="./frontpage_files/star-off.svg" alt="1" title="bad">&nbsp;<img src="./frontpage_files/star-off.svg" alt="2" title="poor">&nbsp;<img src="./frontpage_files/star-off.svg" alt="3" title="regular">&nbsp;<img src="./frontpage_files/star-off.svg" alt="4" title="good">&nbsp;<img src="./frontpage_files/star-off.svg" alt="5" title="gorgeous"><input type="hidden" name="score"></div>
+                                        <span class="movie__rating">4.9</span>
+                                    </div>               
+                                </div>
+                            </div>
+                          Movie variant with time -->
+
+                         <!-- Movie variant with time 
+                            <div class="movie movie--test movie--test--dark movie--test--right">
+                                <div class="movie__images">
+                                    <a href="http://amovie.designzway.com/movie-page-left.html" class="movie-beta__link">
+                                    <img alt="" src="./frontpage_files/movie-time14.jpg">
+                                    </a>
+                                </div>
+
+                                <div class="movie__info">
+                                    <a href="http://amovie.designzway.com/movie-page-left.html" class="movie__title">The Internship (2013)  </a>
+
+                                    <p class="movie__time">112 min</p>
+
+                                    <p class="movie__option"><a href="http://amovie.designzway.com/#">Comedy</a></p>
+                                    
+                                    <div class="movie__rate">
+                                        <div class="score" style="cursor: pointer; width: 130px;"><img src="./frontpage_files/star-off.svg" alt="1" title="bad">&nbsp;<img src="./frontpage_files/star-off.svg" alt="2" title="poor">&nbsp;<img src="./frontpage_files/star-off.svg" alt="3" title="regular">&nbsp;<img src="./frontpage_files/star-off.svg" alt="4" title="good">&nbsp;<img src="./frontpage_files/star-off.svg" alt="5" title="gorgeous"><input type="hidden" name="score"></div>
+                                        <span class="movie__rating">5.0</span>
+                                    </div>               
+                                </div>
+                            </div>
+                          Movie variant with time -->
+
+
+                        <div class="row">
+                            <div class="social-group">
+                              <div class="col-sm-6 col-md-4 col-sm-push-6 col-md-push-4">
+                                    <div class="social-group__head">Join <br>our social groups</div>
+                                    <div class="social-group__content">A lot of fun, discussions, queezes and contests among members. <br class="hidden-xs"><br>Always be first to know about best offers from cinemas and our partners</div>
+                                </div>
+
+                                <div class="col-sm-6 col-md-4 col-sm-pull-6 col-md-pull-4">
+                                     <div class="facebook-group">
+
+                                        <iframe class="fgroup" src="{% static 'saved_resource.html' %}" scrolling="no" frameborder="0" style="border: none; overflow: hidden; width: 240px; height: 330px; display: none !important;" allowtransparency="true"></iframe>
+                                    </div>
+                                </div>
+                                
+                                <div class="clearfix visible-sm"></div>
+                                <div class="col-sm-6 col-md-4">
+                                    <div class="twitter-group">
+                                        <div id="twitter-feed"><p class="twitter__head">Tweets</p><a href="https://twitter.com/intent/follow?original_referer=&screen_name=OliaGozha&tw_p=followbutton&variant=2.0" target="_blank" class="twitter-follow-button twitter__follow" data-show-count="false" data-show-screen-name="false">Follow</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?"http":"https";if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document, "script", "twitter-wjs");</script><div class="twitter-article" id="tw1"><div class="twitter-pic"><a href="https://twitter.com/OliaGozha" target="_blank"><img src="{% static 'NQgoe4q5_normal.jpeg' %}" images="twitter-feed-icon.png" width="42" height="42" alt="twitter icon"></a></div><p class="twitter-author">OliaGozha</p><p><span class="tweetprofilelink"><a href="https://twitter.com/OliaGozha" target="_blank">@OliaGozha</a></span></p><div class="twitter-text"><p><span class="tweet-time"><a href="https://twitter.com/OliaGozha/status/526808604679348224" target="_blank">10h</a></span><a href="http://twitter.com/envato_support" style="font-weight:lighter;" target="_blank">@envato_support</a> Please review my ticket <a href="https://twitter.com/search?q=89660" style="font-weight:lighter;" target="_blank">#89660</a>. It's urgent as it involves a buyer who needs our help, but there is no way to contact him.</p><div id="twitter-actions"><div class="intent" id="intent-reply"><a href="https://twitter.com/intent/tweet?in_reply_to=526808604679348224" title="Reply"></a></div><div class="intent" id="intent-retweet"><a href="https://twitter.com/intent/retweet?tweet_id=526808604679348224" title="Retweet"></a></div><div class="intent" id="intent-fave"><a href="https://twitter.com/intent/favorite?tweet_id=526808604679348224" title="Favourite"></a></div></div></div></div><div class="twitter-article" id="tw2"><div class="twitter-pic"><a href="https://twitter.com/OliaGozha" target="_blank"><img src="{% static 'NQgoe4q5_normal.jpeg' %}" images="" twitter-feed-icon.png"="" width="42" height="42" alt="twitter icon"></a></div><p class="twitter-author">OliaGozha</p><p><span class="tweetprofilelink"><a href="https://twitter.com/OliaGozha" target="_blank">@OliaGozha</a></span></p><div class="twitter-text"><p><span class="tweet-time"><a href="https://twitter.com/OliaGozha/status/526656554993332226" target="_blank">20h</a></span>This project is just an admiration. Amazing "Illustration «Flower»", a project on <a href="http://twitter.com/Behance" style="font-weight:lighter;" target="_blank">@Behance</a> ::  <a href="https://t.co/PT9RrIviPR" target="_blank">https://t.co/PT9RrIviPR</a> <a href="https://twitter.com/search?q=illustration" style="font-weight:lighter;" target="_blank">#illustration</a> <a href="https://twitter.com/search?q=design" style="font-weight:lighter;" target="_blank">#design</a></p><div id="twitter-actions"><div class="intent" id="intent-reply"><a href="https://twitter.com/intent/tweet?in_reply_to=526656554993332226" title="Reply"></a></div><div class="intent" id="intent-retweet"><a href="https://twitter.com/intent/retweet?tweet_id=526656554993332226" title="Retweet"></a></div><div class="intent" id="intent-fave"><a href="https://twitter.com/intent/favorite?tweet_id=526656554993332226" title="Favourite"></a></div></div></div></div><div class="twitter-article" id="tw3"><div class="twitter-pic"><a href="https://twitter.com/OliaGozha" target="_blank"><img src="{% static 'NQgoe4q5_normal.jpeg' %}" images="" twitter-feed-icon.png"="" width="42" height="42" alt="twitter icon"></a></div><p class="twitter-author">OliaGozha</p><p><span class="tweetprofilelink"><a href="https://twitter.com/OliaGozha" target="_blank">@OliaGozha</a></span></p><div class="twitter-text"><p><span class="tweet-time"><a href="https://twitter.com/OliaGozha/status/526655176904425472" target="_blank">20h</a></span>SF Dribbble Meetup <a href="http://twitter.com/Weebly" style="font-weight:lighter;" target="_blank">@Weebly</a> by <a href="http://twitter.com/lobanovskiy" style="font-weight:lighter;" target="_blank">@lobanovskiy</a> on <a href="http://twitter.com/dribbble" style="font-weight:lighter;" target="_blank">@dribbble</a> <a href="https://t.co/J5c91MtMU9" target="_blank">https://t.co/J5c91MtMU9</a> <a href="https://twitter.com/search?q=dribbble" style="font-weight:lighter;" target="_blank">#dribbble</a> <a href="https://twitter.com/search?q=dribbble_meetup" style="font-weight:lighter;" target="_blank">#dribbble_meetup</a></p><div id="twitter-actions"><div class="intent" id="intent-reply"><a href="https://twitter.com/intent/tweet?in_reply_to=526655176904425472" title="Reply"></a></div><div class="intent" id="intent-retweet"><a href="https://twitter.com/intent/retweet?tweet_id=526655176904425472" title="Retweet"></a></div><div class="intent" id="intent-fave"><a href="https://twitter.com/intent/favorite?tweet_id=526655176904425472" title="Favourite"></a></div></div></div></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--    
+                    <aside class="col-sm-4 col-md-3">
+                        <div class="sitebar first-banner--left">
+                            <div class="banner-wrap first-banner--left">
+                                <img alt="banner" src="{% static 'sale.jpg' %}">
+                            </div>
+
+                             <div class="banner-wrap">
+                                <img alt="banner" src="{% static 'sport.jpg' %}">
+                            </div>
+
+                             <div class="banner-wrap banner-wrap--last">
+                                <img alt="banner" src="{% static 'boots.jpg' %}">
+                            </div>
+
+                            <div class="promo marginb-sm">
+                              <div class="promo__head">A.Movie app</div>
+                              <div class="promo__describe">for all smartphones<br> and tablets</div>
+                              <div class="promo__content">
+                                  <ul>
+                                      <li class="store-variant"><a href="http://amovie.designzway.com/#"><img alt="" src="{% static 'NQgoe4q5_normal.jpeg' %}"></a></li>
+                                      <li class="store-variant"><a href="http://amovie.designzway.com/#"><img alt="" src="http://amovie.designzway.com/images/google-play.svg" style="display: none !important;"></a></li>
+                                      <li class="store-variant"><a href="http://amovie.designzway.com/#"><img alt="" src="{% static 'NQgoe4q5_normal.jpeg' %}"></a></li>
+                                  </ul>
+                              </div>
+                          </div>
+    
+                        </div>
+                    </aside>
+                -->
+                </div>
+            </div>
+
+            <div class="col-sm-12">
+                <h2 class="page-heading">Latest news</h2>
+
+                <div class="col-sm-4 similar-wrap col--remove">
+                    <div class="post post--preview post--preview--wide">
+                        <div class="post__image">
+                            <img alt="" src="{% static 'post-thor.jpg' %}">
+                            <div class="social social--position social--hide">
+                                <span class="social__name">Share:</span>
+                                <a href="http://amovie.designzway.com/#" class="social__variant social--first fa fa-facebook"></a>
+                                <a href="http://amovie.designzway.com/#" class="social__variant social--second fa fa-twitter"></a>
+                                <a href="http://amovie.designzway.com/#" class="social__variant social--third fa fa-vk"></a>
+                            </div>
+                        </div>
+                        <p class="post__date">22 October 2013 </p>
+                        <a href="http://amovie.designzway.com/single-page-left.html" class="post__title">"Thor: The Dark World" - World Premiere</a>
+                        <a href="http://amovie.designzway.com/single-page-left.html" class="btn read-more post--btn">read more</a>
+                    </div>
+                </div>
+                <div class="col-sm-4 similar-wrap col--remove">
+                    <div class="post post--preview post--preview--wide">
+                        <div class="post__image">
+                            <img alt="" src="{% static 'ost-annual.jpg' %}">
+                            <div class="social social--position social--hide">
+                                <span class="social__name">Share:</span>
+                                <a href="http://amovie.designzway.com/#" class="social__variant social--first fa fa-facebook"></a>
+                                <a href="http://amovie.designzway.com/#" class="social__variant social--second fa fa-twitter"></a>
+                                <a href="http://amovie.designzway.com/#" class="social__variant social--third fa fa-vk"></a>
+                            </div>
+                        </div>
+                        <p class="post__date">22 October 2013 </p>
+                        <a href="http://amovie.designzway.com/single-page-left.html" class="post__title">30th Annual Night Of Stars Presented By The Fashion Group International</a>
+                        <a href="http://amovie.designzway.com/single-page-left.html" class="btn read-more post--btn">read more</a>
+                    </div>
+                </div>
+                <div class="col-sm-4 similar-wrap col--remove">
+                    <div class="post post--preview post--preview--wide">
+                        <div class="post__image">
+                            <img alt="" src="{% static 'post-awards.jpg' %}">
+                            <div class="social social--position social--hide">
+                                <span class="social__name">Share:</span>
+                                <a href="http://amovie.designzway.com/#" class="social__variant social--first fa fa-facebook"></a>
+                                <a href="http://amovie.designzway.com/#" class="social__variant social--second fa fa-twitter"></a>
+                                <a href="http://amovie.designzway.com/#" class="social__variant social--third fa fa-vk"></a>
+                            </div>
+                        </div>
+                        <p class="post__date">22 October 2013 </p>
+                        <a href="http://amovie.designzway.com/single-page-left.html" class="post__title">Hollywood Film Awards 2013</a>
+                        <a href="http://amovie.designzway.com/single-page-left.html" class="btn read-more post--btn">read more</a>
+                    </div>
+                </div>
+            </div>
+                
+        </section>
+        
+        <div class="clearfix"></div>
+
+        <footer class="footer-wrapper">
+            <section class="container">
+                <div class="col-xs-4 col-md-2 footer-nav">
+                    <ul class="nav-link">
+                        <li><a href="http://amovie.designzway.com/#" class="nav-link__item">Cities</a></li>
+                        <li><a href="http://amovie.designzway.com/movie-list-left.html" class="nav-link__item">Movies</a></li>
+                        <li><a href="http://amovie.designzway.com/trailer.html" class="nav-link__item">Trailers</a></li>
+                        <li><a href="http://amovie.designzway.com/rates-left.html" class="nav-link__item">Rates</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-4 col-md-2 footer-nav">
+                    <ul class="nav-link">
+                        <li><a href="http://amovie.designzway.com/coming-soon.html" class="nav-link__item">Coming soon</a></li>
+                        <li><a href="http://amovie.designzway.com/cinema-list.html" class="nav-link__item">Cinemas</a></li>
+                        <li><a href="http://amovie.designzway.com/offers.html" class="nav-link__item">Best offers</a></li>
+                        <li><a href="http://amovie.designzway.com/news-left.html" class="nav-link__item">News</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-4 col-md-2 footer-nav">
+                    <ul class="nav-link">
+                        <li><a href="http://amovie.designzway.com/#" class="nav-link__item">Terms of use</a></li>
+                        <li><a href="http://amovie.designzway.com/gallery-four.html" class="nav-link__item">Gallery</a></li>
+                        <li><a href="http://amovie.designzway.com/contact.html" class="nav-link__item">Contacts</a></li>
+                        <li><a href="http://amovie.designzway.com/page-elements.html" class="nav-link__item">Shortcodes</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <div class="footer-info">
+                        <p class="heading-special--small">A.Movie<br><span class="title-edition">in the social media</span></p>
+
+                        <div class="social">
+                            <a href="http://amovie.designzway.com/#" class="social__variant fa fa-facebook"></a>
+                            <a href="http://amovie.designzway.com/#" class="social__variant fa fa-twitter"></a>
+                            <a href="http://amovie.designzway.com/#" class="social__variant fa fa-vk"></a>
+                            <a href="http://amovie.designzway.com/#" class="social__variant fa fa-instagram"></a>
+                            <a href="http://amovie.designzway.com/#" class="social__variant fa fa-tumblr"></a>
+                            <a href="http://amovie.designzway.com/#" class="social__variant fa fa-pinterest"></a>
+                        </div>
+                        
+                        <div class="clearfix"></div>
+                        <p class="copy">© A.Movie, 2013. All rights reserved. Done by Olia Gozha</p>
+                    </div>
+                </div>
+            </section>
+        </footer>
+    </div>
+
+    <!-- open/close -->
+        <div class="overlay overlay-hugeinc">
+            
+            <section class="container">
+
+                <div class="col-sm-4 col-sm-offset-4">
+                    <button type="button" class="overlay-close">Close</button>
+                    <form id="login-form" class="login" method="get" novalidate="">
+                        <p class="login__title">sign in <br><span class="login-edition">welcome to A.Movie</span></p>
+
+                        <div class="social social--colored">
+                                <a href="http://amovie.designzway.com/#" class="social__variant fa fa-facebook"></a>
+                                <a href="http://amovie.designzway.com/#" class="social__variant fa fa-twitter"></a>
+                                <a href="http://amovie.designzway.com/#" class="social__variant fa fa-tumblr"></a>
+                        </div>
+
+                        <p class="login__tracker">or</p>
+                        
+                        <div class="field-wrap">
+                        <input type="email" placeholder="Email" name="user-email" class="login__input">
+                        <input type="password" placeholder="Password" name="user-password" class="login__input">
+
+                        <span class="checkbox"></span><input type="checkbox" id="#informed" class="login__check styled">
+                        <label for="#informed" class="login__check-info">remember me</label>
+                         </div>
+                        
+                        <div class="login__control">
+                            <button type="submit" class="btn btn-md btn--warning btn--wider">sign in</button>
+                            <a href="http://amovie.designzway.com/#" class="login__tracker form__tracker">Forgot password?</a>
+                        </div>
+                    </form>
+                </div>
+
+            </section>
+        </div>
+
+	<!-- JavaScript-->
+        <!-- jQuery 1.9.1--> 
+        <script src="{% static 'jquery.min.js' %}"></script>
+        <script>window.jQuery || document.write('<script src="js/external/jquery-1.10.1.min.js"><\/script>')</script>
+        <!-- Migrate --> 
+        <script src="{% static 'jquery-migrate-1.2.1.min.js' %}"></script>
+        <!-- Bootstrap 3--> 
+        <script src="{% static 'bootstrap.min.js' %}"></script>
+
+        <!-- jQuery REVOLUTION Slider -->
+        <script type="text/javascript" src="{% static 'jquery.themepunch.plugins.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'jquery.themepunch.revolution.min.js' %}"></script>
+
+        <!-- Mobile menu -->
+        <script src="{% static 'jquery.mobile.menu.js' %}"></script>
+         <!-- Select -->
+        <script src="{% static 'jquery.selectbox-0.2.min.js' %}"></script>
+        <!-- Stars rate -->
+        <script src="{% static 'jquery.raty.js' %}"></script>
+        
+        <!-- Form element -->
+        <script src="{% static 'form-element.js' %}"></script><style type="text/css">input.styled { display: none; } select.styled { position: relative; width: 190px; opacity: 0; filter: alpha(opacity=0); z-index: 5; } .disabled { opacity: 0.5; filter: alpha(opacity=50); }</style>
+        <!-- Form validation -->
+        <script src="{% static 'form.js' %}"></script>
+
+        <!-- Twitter feed -->
+        <script src="{% static 'twitterfeed.js' %}"></script>
+
+        <!-- Custom -->
+        <script src="{% static 'custom.js' %}"></script><div class="top-scroll" style="display: none;"><a href="http://amovie.designzway.com/#"></a></div>
+		
+	      <script type="text/javascript">
+              $(document).ready(function() {
+                init_Home();
+              });
+		    </script>
+
+
+
+</body></html>

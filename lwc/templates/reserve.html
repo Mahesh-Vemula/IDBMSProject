@@ -1,0 +1,128 @@
+{% extends "base2.html" %}
+{% load static %}
+{% block content %}
+
+	<!-- Main content -->
+    <section class="container">
+        <div class="order-container">
+            <div class="order">
+                <img class="order__images" alt='' src="http://amovie.designzway.com/images/tickets.png">
+                <p class="order__title">Book a ticket <br><span class="order__descript">and have fun movie time</span></p>
+                <div class="order__control">
+                    <a href="book3-buy.html" class="order__control-btn">Purchase</a>
+                    <a href="" class="order__control-btn active">Reserve</a>
+                </div>
+            </div>
+        </div>
+            <div class="order-step-area">
+                <div class="order-step first--step order-step--disable ">1. What &amp; Where &amp; When</div>
+                <div class="order-step second--step order-step--disable">2. Choose a sit</div>
+                <div class="order-step third--step">3. Check out</div>
+            </div>
+
+        <div class="col-sm-12">
+            <div class="checkout-wrapper">
+                
+
+                <h2 class="page-heading">Choose payment method</h2>
+                <div class="payment">
+                    <a href="#" class="payment__item">
+                        <img alt='' src="http://amovie.designzway.com/images/payment/pay1.png">
+                    </a>
+                    <a href="#" class="payment__item">
+                        <img alt='' src="http://amovie.designzway.com/images/payment/pay2.png">
+                    </a>
+                    <a href="#" class="payment__item">
+                        <img alt='' src="http://amovie.designzway.com/images/payment/pay3.png">
+                    </a>
+                    <a href="#" class="payment__item">
+                        <img alt='' src="http://amovie.designzway.com/images/payment/pay4.png">
+                    </a>
+                    <a href="#" class="payment__item">
+                        <img alt='' src="http://amovie.designzway.com/images/payment/pay5.png">
+                    </a>
+                    <a href="#" class="payment__item">
+                        <img alt='' src="http://amovie.designzway.com/images/payment/pay6.png">
+                    </a>
+                    <a href="#" class="payment__item">
+                        <img alt='' src="http://amovie.designzway.com/images/payment/pay7.png">
+                    </a>
+                </div>
+
+                <h2 class="page-heading">Contact Information</h2>
+        
+                <form action="/movietickets/ticket/"  id='contact-info' method='post'  class="form contact-info">
+                    {% csrf_token %}
+
+                        
+                    <p> About Reservation</p>
+                    
+                    <a  class="btn btn-md btn--warning" style="width:137px;">Movie</a>
+                    <div class="contact-info__field ">
+
+                        <input id = "id_movie" type='text' name='movie' placeholder='Movie' class="form__mail" value={{movie.movie_name}} style= "color:black;" readonly>
+                    </div>
+
+                    <a class="btn btn-md btn--warning"style="width:137px;">Theater</a>
+                    <div class="contact-info__field ">
+                        <input id = "id_theater" type='text' name='theater' placeholder='Theater' class="form__mail" value={{theater}} style= "color:black;" readonly>
+                    </div>
+
+                    <a  class="btn btn-md btn--warning"style="width:137px;">Screen</a>
+                    <div class="contact-info__field ">
+                        <input id = "id_screen" type='text' name='screen' placeholder='Screen' class="form__mail" value={{screen}} style= "color:black;" readonly>
+                    </div>
+
+                    <a class="btn btn-md btn--warning"style="width:137px;">Show Time</a>
+                    <div class="contact-info__field ">
+                        <input id = "id_time" type='time' name='time' placeholder='Time' class="form__mail" value={{time}} style= "color:black;" readonly>
+                    </div>
+
+                    <a class="btn btn-md btn--warning"style="width:137px;">Price</a>
+                    <div class="contact-info__field ">
+                        <input id = "id_price" type='number' name='price'  class="form__mail" value={{movie.ticket_cost}} style= "color:black;" readonly>
+                    </div>
+
+                    <a class="btn btn-md btn--warning"style="width:137px;">Price</a>
+                    <div class="contact-info__field ">
+                        <input id = "id_resevation_fee" type='price' name='reservation_fee'  class="form__mail" value="3" style= "color:black;" readonly>
+                    </div>
+
+                    
+                    <p> Enter Contact Details</p>
+
+                    <div class="contact-info__field ">
+                        <input id = "id_name" type='text' name='name' placeholder='Full Name' class="form__mail" style= "color:black;" required>
+                    </div>
+
+                    <div class="contact-info__field contact-info__field-mail">
+                        <input id = "id_email" type='email' name="email" placeholder="Email ID" class="form__mail"  style= "color:black;" required>   
+                    </div>
+                   
+                    <div class="contact-info__field contact-info__field-tel">
+                        <input id = "id_phone_number" type='number' name='phone_number' placeholder='Phone number' class="form__mail" style= "color:black;" required>
+                    </div>
+
+                    <div class="contact-info__field ">
+                        <input id = "id_date" type='date' name='date' placeholder='2014-10-04' class="form__mail" style= "color:black;" required>
+                    </div>
+
+                    <div class="contact-info__field ">
+                        <input id = "id_no_of_seats" type='number' name='no_of_seats' placeholder='Number of Seats' class="form__mail"  style= "color:black;" required>
+                    </div>
+
+                    <div class="order">
+                        <input type="submit" value="BOOK TICKET" class="btn btn-md btn--warning btn--wide">
+                    </div>
+                    
+                </form>
+                              
+                <p class="reservation-message">Fill your contact information to recieve your reservation code. Reserved tickets are removed 20 minutes befor the session is due to start</p>
+            </div>
+        </div>
+    </section>
+    
+
+   
+
+{% endblock %}

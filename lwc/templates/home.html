@@ -1,0 +1,14 @@
+{% extends "base2.html" %}
+{% load static %}
+{% block content %}
+
+<h1>Hello, Welcome to Home</h1>
+<img src="{% static "img/movie-sample2.jpg" %}">
+
+<form method="" action="">
+<input type= 'text' name ='first name'/>
+
+{{form.as_p}}
+<input type ='submit' value = 'Join' class ='btn'/>
+</form>
+{% endblock %}
