@@ -1,4 +1,4 @@
-IDBMSProect
+IDBMSProject
 ===========
 #Project for IDBMS course in UMKC
 ####This project is for online movie ticket reservations. It uses postgresql database and django framework
